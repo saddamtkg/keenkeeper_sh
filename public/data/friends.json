@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Arif Hossain",
+    "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+    "email": "arif.hossain@gmail.com",
+    "days_since_contact": 22,
+    "status": "overdue",
+    "tags": ["school", "cricket"],
+    "bio": "We met in high school and used to play cricket in the field almost every Friday after class.",
+    "goal": 14,
+    "next_due_date": "2026-04-25"
+  },
+  {
+    "id": 2,
+    "name": "Nusrat Jahan",
+    "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+    "email": "nusrat.j@outlook.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["university", "study group"],
+    "bio": "We worked on the same group assignments at university and often grabbed coffee to talk about careers.",
+    "goal": 14,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 3,
+    "name": "Rafiq Ahmed",
+    "picture": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+    "email": "rafiq.ahmed@yahoo.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["work", "team lead"],
+    "bio": "He was my team lead at my previous company; we once shipped a release together the night before a deadline.",
+    "goal": 21,
+    "next_due_date": "2026-05-01"
+  },
+  {
+    "id": 4,
+    "name": "Samira Karim",
+    "picture": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+    "email": "samira.karim@proton.me",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["cousin", "family"],
+    "bio": "My cousin on my father's side; the whole family got together at our grandfather's house last Eid and we reconnected.",
+    "goal": 30,
+    "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 5,
+    "name": "Imran Siddique",
+    "picture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+    "email": "imran.siddique@live.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": ["gym", "neighbor"],
+    "bio": "Lives in the same building; we often run into each other at the gym and swap quick workout tips.",
+    "goal": 14,
+    "next_due_date": "2026-04-16"
+  },
+  {
+    "id": 6,
+    "name": "Farhana Chowdhury",
+    "picture": "https://images.unsplash.com/photo-1544005313-94ddf0286ad2?w=400&h=400&fit=crop",
+    "email": "farhana.c@company.bd",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["mentor", "design"],
+    "bio": "She mentored me on UI design and reviewed my portfolio when I was preparing for my first interviews.",
+    "goal": 10,
+    "next_due_date": "2026-04-22"
+  },
+  {
+    "id": 7,
+    "name": "Tanvir Islam",
+    "picture": "https://images.unsplash.com/photo-1599566150163-ee94ccbd886a?w=400&h=400&fit=crop",
+    "email": "tanvir.islam.dev@gmail.com",
+    "days_since_contact": 9,
+    "status": "on-track",
+    "tags": ["bootcamp", "developer"],
+    "bio": "We were batchmates in a web dev course and ended up on the same hackathon team; we still talk about open source.",
+    "goal": 14,
+    "next_due_date": "2026-04-24"
+  },
+  {
+    "id": 8,
+    "name": "Mahmudul Hasan",
+    "picture": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
+    "email": "mahmud.hasan@icloud.com",
+    "days_since_contact": 27,
+    "status": "overdue",
+    "tags": ["childhood", "photography"],
+    "bio": "Childhood friend from our neighborhood; he is into photography now and sometimes invites me on weekend photo walks.",
+    "goal": 21,
+    "next_due_date": "2026-04-15"
+  },
+  {
+    "id": 9,
+    "name": "Priya Sengupta",
+    "picture": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop",
+    "email": "priya.sengupta@fastmail.com",
+    "days_since_contact": 6,
+    "status": "almost due",
+    "tags": ["book club", "close friend"],
+    "bio": "We met in a book club; once a month we debate endings and spoilers way longer than we should.",
+    "goal": 14,
+    "next_due_date": "2026-04-19"
+  }
+]
