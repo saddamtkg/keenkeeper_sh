@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import 'tailwindcss';
 
@@ -7,7 +7,7 @@
 }
 
 @theme {
-  --font-sans: 'Manrope', sans-serif;
+  --font-sans: 'Geist', sans-serif;
 }
 
 :root {
@@ -17,6 +17,35 @@
 
 @utility my-container {
   width: 90%;
-  max-width: 1280px;
+  max-width: 1110px;
   margin: 0 auto;
+}
+@utility c-text-color-1 {
+  color: #1f2937;
+}
+@utility c-text-color-2 {
+  color: #244d3f;
+}
+@utility body-text-color {
+  color: #64748b;
+}
+@utility but-bg-green {
+  background-color: #244d3f;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #ffffff;
+    border-color: #244d3f;
+    color: #244d3f;
+  }
+}
+
+li.c-tag {
+  padding: 8px 12px;
+  color: #244d3f;
+  background-color: #cbfadb;
+  font-size: 12px;
+  line-height: 1em;
+  font-weight: 500;
+  border-radius: 100px;
+  text-transform: uppercase;
 }

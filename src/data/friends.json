@@ -62,7 +62,7 @@
   {
     "id": 6,
     "name": "Farhana Chowdhury",
-    "picture": "https://images.unsplash.com/photo-1544005313-94ddf0286ad2?w=400&h=400&fit=crop",
+    "picture": "https://i.pravatar.cc/150?img=9",
     "email": "farhana.c@company.bd",
     "days_since_contact": 3,
     "status": "on-track",
@@ -74,7 +74,7 @@
   {
     "id": 7,
     "name": "Tanvir Islam",
-    "picture": "https://images.unsplash.com/photo-1599566150163-ee94ccbd886a?w=400&h=400&fit=crop",
+    "picture": "https://i.pravatar.cc/150?img=15",
     "email": "tanvir.islam.dev@gmail.com",
     "days_since_contact": 9,
     "status": "on-track",
@@ -106,5 +106,41 @@
     "bio": "We met in a book club; once a month we debate endings and spoilers way longer than we should.",
     "goal": 14,
     "next_due_date": "2026-04-19"
+  },
+  {
+    "id": 10,
+    "name": "Sabbir Rahman",
+    "picture": "https://i.pravatar.cc/150?img=20",
+    "email": "sabbir.rahman@gmail.com",
+    "days_since_contact": 16,
+    "status": "overdue",
+    "tags": ["college", "football"],
+    "bio": "We used to play football together during college breaks and often hung out at the local মাঠ.",
+    "goal": 14,
+    "next_due_date": "2026-04-17"
+  },
+  {
+    "id": 11,
+    "name": "Jannatul Ferdous",
+    "picture": "https://i.pravatar.cc/150?img=25",
+    "email": "jannatul.ferdous@yahoo.com",
+    "days_since_contact": 7,
+    "status": "on-track",
+    "tags": ["office", "HR"],
+    "bio": "She helped me a lot during my onboarding process at my first job and always checks in on my progress.",
+    "goal": 14,
+    "next_due_date": "2026-04-21"
+  },
+  {
+    "id": 12,
+    "name": "Rakibul Hasan",
+    "picture": "https://i.pravatar.cc/150?img=30",
+    "email": "rakibul.hasan@proton.me",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": ["freelance", "client"],
+    "bio": "One of my early freelance clients; we worked on a website project and still keep in touch occasionally.",
+    "goal": 14,
+    "next_due_date": "2026-04-18"
   }
 ]
