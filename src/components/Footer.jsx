@@ -29,10 +29,11 @@ const Footer = () => {
               href="https://www.instagram.com/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit KeenKeeper Instagram page (opens in new tab)"
             >
               <Image
                 src="/assets/instagram.png"
-                alt="footer logo"
+                alt="Instagram icon"
                 width={40}
                 height={40}
               />
@@ -41,10 +42,11 @@ const Footer = () => {
               href="https://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit KeenKeeper Facebook page (opens in new tab)"
             >
               <Image
                 src="/assets/facebook.png"
-                alt="footer logo"
+                alt="Facebook icon"
                 width={40}
                 height={40}
               />
@@ -53,10 +55,11 @@ const Footer = () => {
               href="https://x.com/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit KeenKeeper X page (opens in new tab)"
             >
               <Image
                 src="/assets/twitter.png"
-                alt="footer logo"
+                alt="X (Twitter) icon"
                 width={40}
                 height={40}
               />

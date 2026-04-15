@@ -36,7 +36,6 @@ const StatsPage = () => {
     },
   ];
 
-  console.log('timeline', timeline.length);
   return (
     <div className="flex-1 py-10 md:py-20">
       <div className="my-container">
@@ -48,7 +47,10 @@ const StatsPage = () => {
         {timeline.length === 0 ? (
           <div className="bg-base-100 border border-[#1a8862] rounded-2xl p-8 md:p-12 mb-8">
             <div className="flex flex-col items-center justify-center py-12 text-center">
-              <BiMessage className="text-4xl xs:text-5xl md:text-6xl text-[#1a8862] mb-4" />
+              <BiMessage
+                className="text-4xl xs:text-5xl md:text-6xl text-[#1a8862] mb-4"
+                aria-hidden="true"
+              />
               <h2 className="text-xl xs:text-2xl md:text-3xl font-semibold text-gray-700 mb-3">
                 No Analytics Data Yet
               </h2>

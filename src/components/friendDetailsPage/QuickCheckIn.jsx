@@ -16,22 +16,28 @@ const QuickCheckIn = ({ friendName, onCheckIn }) => {
         <button
           onClick={() => onCheckIn?.('call')}
           className="btn w-full xs:w-full sm:w-48 h-20 xs:h-24 flex items-center justify-center flex-col border border-[#e9e9e9] rounded-lg"
+          aria-label={`Log a call with ${friendName}`}
         >
-          <LuPhoneCall className="text-2xl xs:text-3xl" />
+          <LuPhoneCall className="text-2xl xs:text-3xl" aria-hidden="true" />
           <span className="text-base xs:text-lg">Call</span>
         </button>
         <button
           onClick={() => onCheckIn?.('text')}
           className="btn w-full xs:w-full sm:w-48 h-20 xs:h-24 flex items-center justify-center flex-col border border-[#e9e9e9] rounded-lg"
+          aria-label={`Log a text with ${friendName}`}
         >
-          <MdOutlineSms className="text-2xl xs:text-3xl" />
+          <MdOutlineSms className="text-2xl xs:text-3xl" aria-hidden="true" />
           <span className="text-base xs:text-lg">Text</span>
         </button>
         <button
           onClick={() => onCheckIn?.('video')}
           className="btn w-full xs:w-full sm:w-48 h-20 xs:h-24 flex items-center justify-center flex-col border border-[#e9e9e9] rounded-lg"
+          aria-label={`Log a video call with ${friendName}`}
         >
-          <IoVideocamOutline className="text-2xl xs:text-3xl" />
+          <IoVideocamOutline
+            className="text-2xl xs:text-3xl"
+            aria-hidden="true"
+          />
           <span className="text-base xs:text-lg">Video</span>
         </button>
       </div>

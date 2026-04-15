@@ -55,7 +55,7 @@ const TimeLinePage = () => {
                   {item.type === 'call' ? (
                     <Image
                       src="/assets/call.png"
-                      alt="call"
+                      alt="Call interaction icon"
                       width={20}
                       height={20}
                       className="w-8 h-8 xs:w-10 xs:h-10 shrink-0"
@@ -63,7 +63,7 @@ const TimeLinePage = () => {
                   ) : item.type === 'text' ? (
                     <Image
                       src="/assets/text.png"
-                      alt="text"
+                      alt="Text message interaction icon"
                       width={20}
                       height={20}
                       className="w-8 h-8 xs:w-10 xs:h-10 shrink-0"
@@ -71,7 +71,7 @@ const TimeLinePage = () => {
                   ) : item.type === 'video' ? (
                     <Image
                       src="/assets/video.png"
-                      alt="video"
+                      alt="Video call interaction icon"
                       width={20}
                       height={20}
                       className="w-8 h-8 xs:w-10 xs:h-10 shrink-0"

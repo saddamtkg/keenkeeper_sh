@@ -11,8 +11,11 @@ const Banner = () => {
         Your personal shelf of meaningful connections. Browse, tend, and nurture
         the relationships that matter most.
       </p>
-      <button className="btn but-bg-green text-base-100">
-        <FaPlus />
+      <button
+        className="btn but-bg-green text-base-100"
+        aria-label="Add a new friend"
+      >
+        <FaPlus aria-hidden="true" />
         Add Friend
       </button>
     </div>

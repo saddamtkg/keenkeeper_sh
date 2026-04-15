@@ -90,16 +90,22 @@ const FriendDetailsClient = ({ id }) => {
           <p className="body-text-color text-sm">{email}</p>
         </div>
         <div className="space-y-2">
-          <button className="btn w-full">
-            <RiNotificationSnoozeLine />
+          <button
+            className="btn w-full"
+            aria-label="Snooze reminders for 2 weeks"
+          >
+            <RiNotificationSnoozeLine aria-hidden="true" />
             Snooze 2 weeks
           </button>
-          <button className="btn w-full">
-            <RiArchiveLine />
+          <button className="btn w-full" aria-label="Archive this friend">
+            <RiArchiveLine aria-hidden="true" />
             Archive
           </button>
-          <button className="btn w-full text-red-500">
-            <RiDeleteBin6Line />
+          <button
+            className="btn w-full text-red-500"
+            aria-label="Delete this friend"
+          >
+            <RiDeleteBin6Line aria-hidden="true" />
             Delete
           </button>
         </div>
@@ -134,7 +140,12 @@ const FriendDetailsClient = ({ id }) => {
               Connect every <strong>{goal} days</strong>
             </p>
           </div>
-          <button className="btn btn-sm xs:btn-md">Edit</button>
+          <button
+            className="btn btn-sm xs:btn-md"
+            aria-label="Edit relationship goal"
+          >
+            Edit
+          </button>
         </div>
         <div className="p-4 xs:p-6 shadow-sm rounded-lg">
           <QuickCheckIn friendName={name} onCheckIn={handleCheckIn} />

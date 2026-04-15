@@ -37,6 +37,7 @@ const FriendCard = ({ friend }) => {
       </ul>
       <button
         className={`btn mt-4 rounded-[100px] text-base-100 ${statusConfig[friend.status]}`}
+        aria-label={`${friend.name}`}
       >
         {friend.status}
       </button>

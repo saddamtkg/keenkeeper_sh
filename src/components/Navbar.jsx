@@ -16,8 +16,9 @@ const Navbar = () => {
         <Link
           className={`flex gap-1.5 items-center ${panthname === '/' ? 'active' : ''}`}
           href="/"
+          aria-current={panthname === '/' ? 'page' : undefined}
         >
-          <BiHomeAlt2 />
+          <BiHomeAlt2 aria-hidden="true" />
           Home
         </Link>
       </li>
@@ -25,8 +26,9 @@ const Navbar = () => {
         <Link
           className={`flex gap-1.5 items-center ${panthname === '/timeline' ? 'active' : ''}`}
           href="/timeline"
+          aria-current={panthname === '/timeline' ? 'page' : undefined}
         >
-          <RiTimeLine />
+          <RiTimeLine aria-hidden="true" />
           Timeline
         </Link>
       </li>
@@ -34,8 +36,9 @@ const Navbar = () => {
         <Link
           className={`flex gap-1.5 items-center ${panthname === '/stats' ? 'active' : ''}`}
           href="/stats"
+          aria-current={panthname === '/stats' ? 'page' : undefined}
         >
-          <ImStatsDots />
+          <ImStatsDots aria-hidden="true" />
           stats
         </Link>
       </li>
@@ -46,13 +49,19 @@ const Navbar = () => {
       <div className="nav-warp navbar my-container justify-between">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost md:hidden"
+              aria-label="Open navigation menu"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                aria-hidden="true"
               >
                 {' '}
                 <path
@@ -70,10 +79,10 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <Link href="/">
+          <Link href="/" aria-label="KeenKeeper home">
             <Image
               src="/assets/logo.png"
-              alt="header logo"
+              alt="KeenKeeper logo"
               width={140}
               height={30}
             />

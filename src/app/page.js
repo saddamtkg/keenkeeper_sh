@@ -1,5 +1,4 @@
 'use client';
-
 import { useState, useEffect } from 'react';
 import Banner from '@/components/homePage/Banner';
 import FriendsSection from '@/components/homePage/FriendsSection';
@@ -17,9 +16,7 @@ export default function Home() {
   }, []);
 
   if (isLoading) {
-    return (
-      <Loading/>
-    );
+    return <Loading />;
   }
 
   return (
