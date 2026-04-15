@@ -63,7 +63,7 @@ const Navbar = () => {
               src="/assets/logo.png"
               alt="header logo"
               width={140}
-              height={80}
+              height={30}
             />
           </Link>
         </div>
