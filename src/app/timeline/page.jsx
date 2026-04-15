@@ -58,7 +58,7 @@ const TimeLinePage = () => {
                       alt="call"
                       width={20}
                       height={20}
-                      className="w-8 h-8 xs:w-10 xs:h-10 flex-shrink-0"
+                      className="w-8 h-8 xs:w-10 xs:h-10 shrink-0"
                     />
                   ) : item.type === 'text' ? (
                     <Image
@@ -66,7 +66,7 @@ const TimeLinePage = () => {
                       alt="text"
                       width={20}
                       height={20}
-                      className="w-8 h-8 xs:w-10 xs:h-10 flex-shrink-0"
+                      className="w-8 h-8 xs:w-10 xs:h-10 shrink-0"
                     />
                   ) : item.type === 'video' ? (
                     <Image
@@ -74,7 +74,7 @@ const TimeLinePage = () => {
                       alt="video"
                       width={20}
                       height={20}
-                      className="w-8 h-8 xs:w-10 xs:h-10 flex-shrink-0"
+                      className="w-8 h-8 xs:w-10 xs:h-10 shrink-0"
                     />
                   ) : null}
                   <div className="">
