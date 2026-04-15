@@ -4,6 +4,7 @@ import FilterTimeline from '@/components/timeLine/FilterTimeline';
 import useFriends from '@/hooks/useFriends';
 import Image from 'next/image';
 import { useState } from 'react';
+import { RiTimeLine } from 'react-icons/ri';
 
 const TimeLinePage = () => {
   const { timeline } = useFriends();
@@ -41,9 +42,22 @@ const TimeLinePage = () => {
           )}
         </div>
         {filteredTimeline.length === 0 ? (
-          <p className="text-sm xs:text-base text-gray-500">
-            No interactions yet.
-          </p>
+          <div className="bg-base-100 border border-[#1a8862] rounded-2xl p-8 md:p-12 mb-8">
+            <div className="flex flex-col items-center justify-center py-12 text-center">
+              <RiTimeLine
+                className="text-4xl xs:text-5xl md:text-6xl c-text-color-2 mb-4"
+                aria-hidden="true"
+              />
+              <h2 className="text-xl xs:text-2xl md:text-3xl font-semibold text-gray-700 mb-2">
+                No Timeline Yet
+              </h2>
+              <p className="text-sm xs:text-base text-gray-500 mb-8 px-4 max-w-md mx-auto">
+                Start connecting with your friends! Visit their profiles and log
+                your interactions. Every call, text, and video chat will appear
+                here.
+              </p>
+            </div>
+          </div>
         ) : (
           <div>
             <div className="space-y-3 min-h-96">
