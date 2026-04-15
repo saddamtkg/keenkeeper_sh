@@ -11,17 +11,19 @@ const FriendCard = ({ friend }) => {
   return (
     <Link
       href={`/friends/${friend.id}`}
-      className="shadow-sm rounded-lg flex flex-col justify-center items-center p-6 space-y-2 "
+      className="shadow-sm rounded-lg flex flex-col justify-center items-center p-4 xs:p-6 space-y-2 "
     >
       <Image
-        className="rounded-full"
+        className="rounded-full w-24 h-24 xs:w-28 xs:h-28 sm:w-32 sm:h-32 object-cover"
         src={friend.picture}
         alt={friend.name}
         width={100}
         height={100}
       />
-      <h2 className="text-xl font-semibold">{friend.name}</h2>
-      <p className="text-[12px] c-text-color-1">
+      <h2 className="text-base xs:text-lg sm:text-xl font-semibold">
+        {friend.name}
+      </h2>
+      <p className="text-[11px] xs:text-[12px] c-text-color-1">
         {friend.days_since_contact} ago
       </p>
       <ul className="flex gap-2">

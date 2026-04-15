@@ -2,27 +2,39 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { BiHomeAlt2 } from 'react-icons/bi';
 import { ImStatsDots } from 'react-icons/im';
 import { RiTimeLine } from 'react-icons/ri';
 
 const Navbar = () => {
+  const panthname = usePathname();
+
   const links = (
     <>
       <li>
-        <Link className="flex gap-1.5 items-center" href="/">
+        <Link
+          className={`flex gap-1.5 items-center ${panthname === '/' ? 'active' : ''}`}
+          href="/"
+        >
           <BiHomeAlt2 />
           Home
         </Link>
       </li>
       <li>
-        <Link className="flex gap-1.5 items-center" href="/timeline">
+        <Link
+          className={`flex gap-1.5 items-center ${panthname === '/timeline' ? 'active' : ''}`}
+          href="/timeline"
+        >
           <RiTimeLine />
           Timeline
         </Link>
       </li>
       <li>
-        <Link className="flex gap-1.5 items-center" href="/stats">
+        <Link
+          className={`flex gap-1.5 items-center ${panthname === '/stats' ? 'active' : ''}`}
+          href="/stats"
+        >
           <ImStatsDots />
           stats
         </Link>
@@ -31,10 +43,10 @@ const Navbar = () => {
   );
   return (
     <div className="bg-base-100 shadow-sm">
-      <div className="navbar my-container justify-between">
+      <div className="nav-warp navbar my-container justify-between">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -67,7 +79,7 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden md:flex">
           <ul className="flex gap-4">{links}</ul>
         </div>
       </div>

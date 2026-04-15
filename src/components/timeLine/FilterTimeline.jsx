@@ -10,9 +10,9 @@ const FilterTimeline = ({
   setSort,
 }) => {
   return (
-    <div className="flex gap-4 mb-6">
+    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6">
       {/* Search */}
-      <label className="input input-bordered flex items-center gap-2 flex-1">
+      <label className="input input-bordered flex items-center gap-2 flex-1 text-sm">
         <FiSearch />
         <input
           type="text"
@@ -27,7 +27,7 @@ const FilterTimeline = ({
       <select
         value={filter}
         onChange={e => setFilter(e.target.value)}
-        className="select select-bordered"
+        className="select select-bordered flex-1 sm:flex-none text-sm"
       >
         <option value="all">All Types</option>
         <option value="call">Call</option>
@@ -39,7 +39,7 @@ const FilterTimeline = ({
       <select
         value={sort}
         onChange={e => setSort(e.target.value)}
-        className="select select-bordered"
+        className="select select-bordered flex-1 sm:flex-none text-sm"
       >
         <option value="newest">Newest First</option>
         <option value="oldest">Oldest First</option>

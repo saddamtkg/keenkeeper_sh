@@ -24,8 +24,10 @@ const TimeLinePage = () => {
 
   return (
     <div className="flex-1 bg-base-300">
-      <div className="my-container py-20 ">
-        <h1 className="text-3xl font-semibold mb-6">Timeline</h1>
+      <div className="my-container py-10 md:py-20 ">
+        <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-semibold mb-6">
+          Timeline
+        </h1>
         <div>
           {timeline.length > 0 && (
             <FilterTimeline
@@ -39,14 +41,16 @@ const TimeLinePage = () => {
           )}
         </div>
         {filteredTimeline.length === 0 ? (
-          <p className="text-gray-500">No interactions yet.</p>
+          <p className="text-sm xs:text-base text-gray-500">
+            No interactions yet.
+          </p>
         ) : (
           <div>
             <div className="space-y-3 min-h-96">
               {filteredTimeline.map(item => (
                 <div
                   key={item.id}
-                  className="flex bg-base-100 items-center gap-4 p-4 rounded-lg shadow-sm border border-[#e9e9e9]"
+                  className="flex flex-col xs:flex-row bg-base-100 items-start xs:items-center gap-3 xs:gap-4 p-3 xs:p-4 rounded-lg shadow-sm border border-[#e9e9e9]"
                 >
                   {item.type === 'call' ? (
                     <Image
@@ -54,7 +58,7 @@ const TimeLinePage = () => {
                       alt="call"
                       width={20}
                       height={20}
-                      className="w-10 h-10"
+                      className="w-8 h-8 xs:w-10 xs:h-10 flex-shrink-0"
                     />
                   ) : item.type === 'text' ? (
                     <Image
@@ -62,7 +66,7 @@ const TimeLinePage = () => {
                       alt="text"
                       width={20}
                       height={20}
-                      className="w-10 h-10"
+                      className="w-8 h-8 xs:w-10 xs:h-10 flex-shrink-0"
                     />
                   ) : item.type === 'video' ? (
                     <Image
@@ -70,18 +74,20 @@ const TimeLinePage = () => {
                       alt="video"
                       width={20}
                       height={20}
-                      className="w-10 h-10"
+                      className="w-8 h-8 xs:w-10 xs:h-10 flex-shrink-0"
                     />
                   ) : null}
                   <div className="">
-                    <p>
-                      <strong className="text-xl">
+                    <p className="text-xs xs:text-sm">
+                      <strong className="text-base xs:text-xl">
                         {item.type.charAt(0).toUpperCase() +
                           item.type.slice(1)}{' '}
                       </strong>
-                      <span className="text-lg">with {item.friendName}</span>
+                      <span className="text-sm xs:text-lg">
+                        with {item.friendName}
+                      </span>
                     </p>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-xs xs:text-sm text-gray-500">
                       {new Date(item.createdAt).toLocaleString()}
                     </p>
                   </div>

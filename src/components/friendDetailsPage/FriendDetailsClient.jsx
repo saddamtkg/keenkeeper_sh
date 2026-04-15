@@ -1,27 +1,27 @@
-"use client";
+'use client';
 
-import QuickCheckIn from "@/components/friendDetailsPage/QuickCheckIn";
-import useFriends from "@/hooks/useFriends";
-import Image from "next/image";
-import Link from "next/link";
+import QuickCheckIn from '@/components/friendDetailsPage/QuickCheckIn';
+import useFriends from '@/hooks/useFriends';
+import Image from 'next/image';
+import Link from 'next/link';
 
 import {
   RiArchiveLine,
   RiDeleteBin6Line,
   RiNotificationSnoozeLine,
-} from "react-icons/ri";
-import { toast } from "sonner";
+} from 'react-icons/ri';
+import { toast } from 'sonner';
 
 const statusConfig = {
-  overdue: "bg-[#ef4444]",
-  "almost due": "bg-[#efad44]",
-  "on-track": "bg-[#244d3f]",
+  overdue: 'bg-[#ef4444]',
+  'almost due': 'bg-[#efad44]',
+  'on-track': 'bg-[#244d3f]',
 };
 
 const FriendDetailsClient = ({ id }) => {
   const { friends, addInteraction } = useFriends();
 
-  const friend = friends.find((f) => f.id === parseInt(id, 10));
+  const friend = friends.find(f => f.id === parseInt(id, 10));
 
   if (!friend) {
     return (
@@ -46,7 +46,7 @@ const FriendDetailsClient = ({ id }) => {
     next_due_date,
   } = friend;
 
-  const handleCheckIn = (type) => {
+  const handleCheckIn = type => {
     addInteraction({
       friendId: friend.id,
       friendName: friend.name,
@@ -56,18 +56,22 @@ const FriendDetailsClient = ({ id }) => {
   };
 
   return (
-    <div className="my-container flex gap-6 py-20">
-      <div className="flex flex-col gap-4">
-        <div className="w-85 shadow-sm rounded-lg flex flex-col justify-center items-center p-6 space-y-2 ">
+    <div className="my-container flex flex-col md:flex-row gap-6 py-10 md:py-20">
+      <div className="flex flex-col gap-4 w-full md:w-85">
+        <div className="w-full p-4 xs:p-6 shadow-sm rounded-lg flex flex-col justify-center items-center space-y-2 ">
           <Image
-            className="rounded-full"
+            className="rounded-full w-24 h-24 xs:w-28 xs:h-28 sm:w-32 sm:h-32 object-cover"
             src={picture}
             alt={name}
             width={100}
             height={100}
           />
-          <h2 className="text-xl font-semibold">{friend.name}</h2>
-          <p className="text-[12px] c-text-color-1">{days_since_contact} ago</p>
+          <h2 className="text-base xs:text-lg sm:text-xl font-semibold text-center">
+            {friend.name}
+          </h2>
+          <p className="text-[11px] xs:text-[12px] c-text-color-1">
+            {days_since_contact} ago
+          </p>
           <button
             className={`btn rounded-[100px] text-base-100 ${statusConfig[friend.status]}`}
           >
@@ -80,8 +84,10 @@ const FriendDetailsClient = ({ id }) => {
               </li>
             ))}
           </ul>
-          <p className="text-[12px] italic text-center">{bio}</p>
-          <p className="body-text-color">{email}</p>
+          <p className="text-[11px] xs:text-[12px] italic text-center px-2">
+            {bio}
+          </p>
+          <p className="body-text-color text-sm">{email}</p>
         </div>
         <div className="space-y-2">
           <button className="btn w-full">
@@ -98,37 +104,39 @@ const FriendDetailsClient = ({ id }) => {
           </button>
         </div>
       </div>
-      <div className="flex-1 w-[calc(100% - 340px)] space-y-6">
-        <div className="flex justify-between gap-6">
-          <div className="w-56.25 p-8 shadow-sm rounded-lg text-center space-y-2">
-            <h3 className="text-3xl font-semibold c-text-color-2">
+      <div className="flex-1 w-full md:w-[calc(100% - 340px)] space-y-4 xs:space-y-6">
+        <div className="flex flex-col xs:flex-col sm:flex-row gap-4 xs:gap-6">
+          <div className="flex-1 p-6 xs:p-8 shadow-sm rounded-lg text-center space-y-2">
+            <h3 className="text-2xl xs:text-3xl font-semibold c-text-color-2">
               {days_since_contact}
             </h3>
-            <p className="text-[18px]">Days Since Contact</p>
+            <p className="text-sm xs:text-[18px]">Days Since Contact</p>
           </div>
-          <div className="w-56.25 p-8 shadow-sm rounded-lg text-center space-y-2">
-            <h3 className="text-3xl font-semibold c-text-color-2">{goal}</h3>
-            <p className="text-[18px]">Goal (Days)</p>
+          <div className="flex-1 p-6 xs:p-8 shadow-sm rounded-lg text-center space-y-2">
+            <h3 className="text-2xl xs:text-3xl font-semibold c-text-color-2">
+              {goal}
+            </h3>
+            <p className="text-sm xs:text-[18px]">Goal (Days)</p>
           </div>
-          <div className="w-62 p-8 shadow-sm rounded-lg text-center space-y-2">
-            <h3 className="text-3xl font-semibold c-text-color-2">
+          <div className="flex-1 p-6 xs:p-8 shadow-sm rounded-lg text-center space-y-2">
+            <h3 className="text-2xl xs:text-3xl font-semibold c-text-color-2">
               {next_due_date}
             </h3>
-            <p className="text-[18px]">Next Due</p>
+            <p className="text-sm xs:text-[18px]">Next Due</p>
           </div>
         </div>
-        <div className="flex justify-between items-start shadow-sm p-6 rounded-lg">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-4 shadow-sm p-4 xs:p-6 rounded-lg">
           <div>
-            <h3 className="text-xl font-medium c-text-color-2 mb-4">
+            <h3 className="text-base xs:text-lg sm:text-xl font-medium c-text-color-2 mb-2 xs:mb-4">
               Relationship Goal
             </h3>
-            <p>
+            <p className="text-sm xs:text-base">
               Connect every <strong>{goal} days</strong>
             </p>
           </div>
-          <button className="btn">Edit</button>
+          <button className="btn btn-sm xs:btn-md">Edit</button>
         </div>
-        <div className="p-6 shadow-sm rounded-lg">
+        <div className="p-4 xs:p-6 shadow-sm rounded-lg">
           <QuickCheckIn friendName={name} onCheckIn={handleCheckIn} />
         </div>
       </div>

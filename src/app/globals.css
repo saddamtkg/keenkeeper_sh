@@ -49,3 +49,13 @@ li.c-tag {
   border-radius: 100px;
   text-transform: uppercase;
 }
+
+.nav-warp a {
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+.nav-warp a.active {
+  background-color: #244d3f;
+  color: #fff;
+}
