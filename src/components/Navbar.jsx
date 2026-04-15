@@ -39,7 +39,7 @@ const Navbar = () => {
           aria-current={panthname === '/stats' ? 'page' : undefined}
         >
           <ImStatsDots aria-hidden="true" />
-          stats
+          Stats
         </Link>
       </li>
     </>
@@ -84,7 +84,9 @@ const Navbar = () => {
               src="/assets/logo.png"
               alt="KeenKeeper logo"
               width={140}
-              height={30}
+              height={40}
+              style={{ height: 'auto' }}
+              priority
             />
           </Link>
         </div>

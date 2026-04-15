@@ -6,7 +6,10 @@ import initialFriends from '@/data/friends.json';
 
 const AppProvider = ({ children }) => {
   const [friends, setFriends] = useState(initialFriends);
-  const [timeline, setTimeline] = useState([]);
+  const [timeline, setTimeline] = useState(() => {
+    if (typeof window === 'undefined') return [];
+    return JSON.parse(localStorage.getItem('timeline') || '[]');
+  });
 
   const addInteraction = ({ friendId, friendName, type }) => {
     const newItem = {
@@ -16,9 +19,12 @@ const AppProvider = ({ children }) => {
       type,
       createdAt: new Date().toISOString(),
     };
-    setTimeline(prev => [newItem, ...prev]);
+    setTimeline(prev => {
+      const updated = [newItem, ...prev];
+      localStorage.setItem('timeline', JSON.stringify(updated));
+      return updated;
+    });
   };
-
   const data = useMemo(
     () => ({
       friends,
