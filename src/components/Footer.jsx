@@ -12,7 +12,7 @@ const Footer = () => {
               alt="footer logo"
               width={412}
               height={60}
-              className="w-52 xs:w-80 sm:w-96 md:w-[412px] h-auto"
+              className="w-52 xs:w-80 sm:w-96 md:w-103 h-auto"
             />
           </Link>
           <p className="text-sm xs:text-base sm:text-[16px] text-base-100 mt-4 mb-6 px-4 text-center">
